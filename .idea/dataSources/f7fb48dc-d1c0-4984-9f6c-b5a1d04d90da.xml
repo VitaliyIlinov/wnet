@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="wnet@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="wnet">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="filemanager"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="lemon_tsn"/>
+    <schema id="6" parent="1" name="lm_lemon"/>
+    <schema id="7" parent="1" name="mvc"/>
+    <schema id="8" parent="1" name="my"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="phpmyadmin"/>
+    <schema id="12" parent="1" name="shop"/>
+    <schema id="13" parent="1" name="solomono"/>
+    <schema id="14" parent="1" name="test"/>
+    <schema id="15" parent="1" name="test_delivery"/>
+    <schema id="16" parent="1" name="wp"/>
+    <schema id="17" parent="1" name="zoo_demo"/>
+    <schema id="18" parent="1" name="zoo_old"/>
+    <table id="19" parent="2" name="obj_contracts"/>
+    <table id="20" parent="2" name="obj_customers"/>
+    <table id="21" parent="2" name="obj_services"/>
+    <column id="22" parent="19" name="id_contract">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="19" name="id_customer">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="19" name="number">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="19" name="date_sign">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="19" name="staff_number">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="19" name="PRIMARY">
+      <ColNames>id_contract</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="20" name="id_customer">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="20" name="name_customer">
+      <Position>2</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="20" name="company">
+      <Position>3</Position>
+      <DataType>enum(&apos;company_1&apos;, &apos;company_2&apos;, &apos;company_3&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="31" parent="20" name="PRIMARY">
+      <ColNames>id_customer</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="21" name="id_services">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="21" name="id_contract">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="21" name="title_service">
+      <Position>3</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="21" name="status">
+      <Position>4</Position>
+      <DataType>enum(&apos;work&apos;, &apos;connecting&apos;, &apos;disconnected&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="36" parent="21" name="PRIMARY">
+      <ColNames>id_services</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
